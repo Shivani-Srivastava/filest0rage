@@ -1,26 +1,25 @@
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 public class dataProcessingExample {
-    
     public static void main(String[] args) {
         List<String> items = getData(); // Assuming you have a list of items to process
-
+ 
         int dataSize = 3; // Define the size of each data
         int totalItems = items.size();
         int totaldataes = (int) Math.ceil((double) totalItems / dataSize);
-
+ 
         for (int dataIndex = 0; dataIndex < totaldataes; dataIndex++) {
             int startIndex = dataIndex * dataSize;
             int endIndex = Math.min(startIndex + dataSize, totalItems);
-
+ 
             List<String> data = items.subList(startIndex, endIndex);
             processdata(data);
-
+ 
             // You can perform any other operations on the processed data here if needed
         }
     }
-
+ 
     public static void processdata(List<String> data) {
         // Perform the required processing on the data
         for (String item : data) {
@@ -29,7 +28,7 @@ public class dataProcessingExample {
             // ... Perform processing logic here ...
         }
     }
-
+ 
     public static List<String> getData() {
         // Simulating getting data from a source (e.g., database, file)
         List<String> items = new ArrayList<>();
@@ -46,3 +45,5 @@ public class dataProcessingExample {
         return items;
     }
 }
+
+has context menu
